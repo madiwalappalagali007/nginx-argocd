@@ -6,22 +6,22 @@ resources:
 # - hpa.yaml
 #   - service.yaml
 - rollout.yaml
-patches:
-  - target:
-      kind: Service
-      name: nginx-active
-    patch: |-
-      - op: replace
-        path: /spec/selector
-        value:
-          matchLabels:
-            app: nginx-active
-  - target:
-      kind: Service
-      name: nginx-preview
-    patch: |-
-      - op: replace
-        path: /spec/selector
-        value:
-          matchLabels:
-            app: nginx-active
+# patches:
+#   - target:
+#       kind: Service
+#       name: nginx-active
+#     patch: |-
+#       - op: replace
+#         path: /spec/selector
+#         value:
+#           matchLabels:
+#             app: nginx-active
+#   - target:
+#       kind: Service
+#       name: nginx-preview
+#     patch: |-
+#       - op: replace
+#         path: /spec/selector
+#         value:
+#           matchLabels:
+#             app: nginx-active
