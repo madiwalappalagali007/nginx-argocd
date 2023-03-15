@@ -5,6 +5,6 @@ namespace: nginx
 resources:
   - deployment-blue.yaml
   - deployment-green.yaml
-  - service-preview.yaml
+#   - service-preview.yaml
   - service.yaml
   - rollout.yaml
